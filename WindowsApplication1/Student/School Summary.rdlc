@@ -1,0 +1,358 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSources>
+    <DataSource Name="Ingenium_2011ConnectionString">
+      <rd:DataSourceID>12ca3eda-1f15-40a5-81b7-e07febdaa689</rd:DataSourceID>
+      <ConnectionProperties>
+        <DataProvider>
+        </DataProvider>
+        <ConnectString>
+        </ConnectString>
+      </ConnectionProperties>
+    </DataSource>
+  </DataSources>
+  <InteractiveHeight>11in</InteractiveHeight>
+  <rd:DrawGrid>true</rd:DrawGrid>
+  <InteractiveWidth>8.5in</InteractiveWidth>
+  <rd:GridSpacing>0.25cm</rd:GridSpacing>
+  <rd:SnapToGrid>true</rd:SnapToGrid>
+  <RightMargin>2.5cm</RightMargin>
+  <LeftMargin>2.5cm</LeftMargin>
+  <BottomMargin>2.5cm</BottomMargin>
+  <rd:ReportID>aa0d860b-e6f3-4bf2-a379-268dbaab12e0</rd:ReportID>
+  <PageWidth>21cm</PageWidth>
+  <DataSets>
+    <DataSet Name="Ingenium_2011DataSet_Student_School_COmplete">
+      <Fields>
+        <Field Name="StuId">
+          <DataField>StuId</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="SchoolId">
+          <DataField>SchoolId</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Stream">
+          <DataField>Stream</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Student_Name">
+          <DataField>Student Name</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Father_Name">
+          <DataField>Father Name</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Address_Permanent">
+          <DataField>Address Permanent</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Address_Correspondance">
+          <DataField>Address Correspondance</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Mobile_Personal">
+          <DataField>Mobile Personal</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Mobile_Guardian">
+          <DataField>Mobile Guardian</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Other_No">
+          <DataField>Other No</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="EmailId">
+          <DataField>EmailId</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="DOB">
+          <DataField>DOB</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Father_Occupation">
+          <DataField>Father Occupation</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="BPL">
+          <DataField>BPL</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="Category">
+          <DataField>Category</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ID10th_Grade">
+          <DataField>10th Grade</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Ingenium_">
+          <DataField>Ingenium%</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Discount_offered">
+          <DataField>Discount offered</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="School_Name">
+          <DataField>School Name</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="City">
+          <DataField>City</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Address">
+          <DataField>Address</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Stream1">
+          <DataField>Stream1</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="StreamName">
+          <DataField>StreamName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>Ingenium_2011ConnectionString</DataSourceName>
+        <CommandText>SELECT        Student.StuId, Student.SchoolId, Student.Stream, Student.[Student Name], Student.[Father Name], Student.[Address Permanent], 
+                         Student.[Address Correspondance], Student.[Mobile Personal], Student.[Mobile Guardian], Student.[Other No], Student.EmailId, Student.DOB, 
+                         Student.[Father Occupation], Student.BPL, Student.Category, Student.[10th Grade], Student.[Ingenium%], Student.[Discount offered], 
+                         [Visited Schools].[School Name], [Visited Schools].City, [Visited Schools].Address, Stream.Stream AS StreamName
+FROM            ((Student INNER JOIN
+                         [Visited Schools] ON Student.SchoolId = [Visited Schools].SchoolId) INNER JOIN
+                         Stream ON Student.Stream = Stream.StreamId)
+ORDER BY Student.[Student Name]</CommandText>
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+      </Query>
+      <rd:DataSetInfo>
+        <rd:DataSetName>Ingenium_2011DataSet</rd:DataSetName>
+        <rd:TableName>Student School COmplete</rd:TableName>
+        <rd:TableAdapterName>Student_School_COmpleteTableAdapter</rd:TableAdapterName>
+        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
+        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
+      </rd:DataSetInfo>
+    </DataSet>
+  </DataSets>
+  <Width>10.75cm</Width>
+  <Body>
+    <ColumnSpacing>1cm</ColumnSpacing>
+    <ReportItems>
+      <Textbox Name="textbox1">
+        <rd:DefaultName>textbox1</rd:DefaultName>
+        <Width>10cm</Width>
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>1</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Height>0.53333cm</Height>
+        <Value>School Summary</Value>
+      </Textbox>
+      <List Name="List1">
+        <Sorting>
+          <SortBy>
+            <SortExpression>=Fields!City.Value</SortExpression>
+            <Direction>Ascending</Direction>
+          </SortBy>
+        </Sorting>
+        <DataSetName>Ingenium_2011DataSet_Student_School_COmplete</DataSetName>
+        <ReportItems>
+          <Textbox Name="City">
+            <rd:DefaultName>City</rd:DefaultName>
+            <Width>7.5cm</Width>
+            <Style>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>1</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Height>0.53333cm</Height>
+            <Value>=Fields!City.Value</Value>
+          </Textbox>
+          <Matrix Name="matrix1">
+            <MatrixColumns>
+              <MatrixColumn>
+                <Width>1.5cm</Width>
+              </MatrixColumn>
+            </MatrixColumns>
+            <DataSetName>Ingenium_2011DataSet_Student_School_COmplete</DataSetName>
+            <RowGroupings>
+              <RowGrouping>
+                <Width>7.75cm</Width>
+                <DynamicRows>
+                  <Grouping Name="matrix1_School_Name">
+                    <GroupExpressions>
+                      <GroupExpression>=Fields!School_Name.Value</GroupExpression>
+                    </GroupExpressions>
+                  </Grouping>
+                  <Sorting>
+                    <SortBy>
+                      <SortExpression>=Fields!School_Name.Value</SortExpression>
+                      <Direction>Ascending</Direction>
+                    </SortBy>
+                  </Sorting>
+                  <Subtotal>
+                    <ReportItems>
+                      <Textbox Name="textbox4">
+                        <rd:DefaultName>textbox4</rd:DefaultName>
+                        <Style>
+                          <BorderStyle>
+                            <Default>Solid</Default>
+                          </BorderStyle>
+                          <PaddingLeft>2pt</PaddingLeft>
+                          <PaddingRight>2pt</PaddingRight>
+                          <PaddingTop>2pt</PaddingTop>
+                          <PaddingBottom>2pt</PaddingBottom>
+                        </Style>
+                        <CanGrow>true</CanGrow>
+                        <Value>Total</Value>
+                      </Textbox>
+                    </ReportItems>
+                  </Subtotal>
+                  <ReportItems>
+                    <Textbox Name="School_Name">
+                      <rd:DefaultName>School_Name</rd:DefaultName>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!School_Name.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </DynamicRows>
+              </RowGrouping>
+            </RowGroupings>
+            <Top>1.26984cm</Top>
+            <ColumnGroupings>
+              <ColumnGrouping>
+                <Height>1cm</Height>
+                <DynamicColumns>
+                  <Grouping Name="matrix1_StreamName">
+                    <GroupExpressions>
+                      <GroupExpression>=Fields!StreamName.Value</GroupExpression>
+                    </GroupExpressions>
+                  </Grouping>
+                  <Sorting>
+                    <SortBy>
+                      <SortExpression>=Fields!StreamName.Value</SortExpression>
+                      <Direction>Ascending</Direction>
+                    </SortBy>
+                  </Sorting>
+                  <Subtotal>
+                    <ReportItems>
+                      <Textbox Name="textbox5">
+                        <rd:DefaultName>textbox5</rd:DefaultName>
+                        <Style>
+                          <PaddingLeft>2pt</PaddingLeft>
+                          <PaddingRight>2pt</PaddingRight>
+                          <PaddingTop>2pt</PaddingTop>
+                          <PaddingBottom>2pt</PaddingBottom>
+                        </Style>
+                        <CanGrow>true</CanGrow>
+                        <Value>Total</Value>
+                      </Textbox>
+                    </ReportItems>
+                  </Subtotal>
+                  <ReportItems>
+                    <Textbox Name="StreamName">
+                      <rd:DefaultName>StreamName</rd:DefaultName>
+                      <Style>
+                        <BorderColor>
+                          <Default>Gray</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Dotted</Default>
+                        </BorderStyle>
+                        <FontSize>8pt</FontSize>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!StreamName.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </DynamicColumns>
+              </ColumnGrouping>
+            </ColumnGroupings>
+            <Corner>
+              <ReportItems>
+                <Textbox Name="textbox3">
+                  <rd:DefaultName>textbox3</rd:DefaultName>
+                  <Style>
+                    <BorderColor>
+                      <Default>Gray</Default>
+                    </BorderColor>
+                    <BorderStyle>
+                      <Default>Dotted</Default>
+                    </BorderStyle>
+                    <PaddingLeft>2pt</PaddingLeft>
+                    <PaddingRight>2pt</PaddingRight>
+                    <PaddingTop>2pt</PaddingTop>
+                    <PaddingBottom>2pt</PaddingBottom>
+                  </Style>
+                  <CanGrow>true</CanGrow>
+                  <Value>
+                  </Value>
+                </Textbox>
+              </ReportItems>
+            </Corner>
+            <MatrixRows>
+              <MatrixRow>
+                <Height>0.53333cm</Height>
+                <MatrixCells>
+                  <MatrixCell>
+                    <ReportItems>
+                      <Textbox Name="textbox2">
+                        <rd:DefaultName>textbox2</rd:DefaultName>
+                        <Style>
+                          <BorderStyle>
+                            <Default>Solid</Default>
+                          </BorderStyle>
+                          <PaddingLeft>2pt</PaddingLeft>
+                          <PaddingRight>2pt</PaddingRight>
+                          <PaddingTop>2pt</PaddingTop>
+                          <PaddingBottom>2pt</PaddingBottom>
+                        </Style>
+                        <CanGrow>true</CanGrow>
+                        <Value>=Count(Fields!StuId.Value)</Value>
+                      </Textbox>
+                    </ReportItems>
+                  </MatrixCell>
+                </MatrixCells>
+              </MatrixRow>
+            </MatrixRows>
+          </Matrix>
+        </ReportItems>
+        <Top>0.53333cm</Top>
+        <Grouping Name="list1_City">
+          <GroupExpressions>
+            <GroupExpression>=Fields!City.Value</GroupExpression>
+          </GroupExpressions>
+          <PageBreakAtEnd>true</PageBreakAtEnd>
+        </Grouping>
+      </List>
+    </ReportItems>
+    <Height>3.86983cm</Height>
+  </Body>
+  <Language>en-US</Language>
+  <TopMargin>2.5cm</TopMargin>
+  <PageHeight>29.7cm</PageHeight>
+</Report>

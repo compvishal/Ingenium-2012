@@ -1,0 +1,13 @@
+﻿
+SQL to insert new students in Event Student file
+
+SELECT        StuId, Stream, SchoolId
+FROM            Student
+WHERE        (SchoolId IN
+                             (SELECT        SchoolId
+                               FROM            [Event School]
+                               WHERE        (EventId = 1))) AND (StuId NOT IN
+                             (SELECT        StudentId
+                               FROM            [Event Students]
+                               WHERE        (EventId = 1))) AND (Stream = 1 OR
+                         Stream = 2)

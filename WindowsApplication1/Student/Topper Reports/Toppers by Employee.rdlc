@@ -1,0 +1,337 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSources>
+    <DataSource Name="Ingenium_2011ConnectionString">
+      <rd:DataSourceID>91126fe0-79ed-46f0-a3f4-ad97a7aafd5a</rd:DataSourceID>
+      <ConnectionProperties>
+        <DataProvider>
+        </DataProvider>
+        <ConnectString>
+        </ConnectString>
+      </ConnectionProperties>
+    </DataSource>
+  </DataSources>
+  <InteractiveHeight>11in</InteractiveHeight>
+  <rd:DrawGrid>true</rd:DrawGrid>
+  <InteractiveWidth>8.5in</InteractiveWidth>
+  <rd:SnapToGrid>true</rd:SnapToGrid>
+  <RightMargin>1in</RightMargin>
+  <LeftMargin>1in</LeftMargin>
+  <BottomMargin>1in</BottomMargin>
+  <rd:ReportID>b0ad8dac-a7db-431f-8f9e-0cea928ffb6b</rd:ReportID>
+  <DataSets>
+    <DataSet Name="Ingenium_2011DataSet_Tested_School_Toppers">
+      <Fields>
+        <Field Name="TotStudent">
+          <DataField>TotStudent</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="SchoolId">
+          <DataField>SchoolId</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="School_Name">
+          <DataField>School Name</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="City">
+          <DataField>City</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Attached_Employee">
+          <DataField>Attached Employee</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Emply_Name">
+          <DataField>Emply Name</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Stream">
+          <DataField>Stream</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Topper">
+          <DataField>Topper</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>Ingenium_2011ConnectionString</DataSourceName>
+        <CommandText>SELECT        COUNT(Student.StuId) AS TotStudent, [Visited Schools].SchoolId, [Visited Schools].[School Name], [Visited Schools].City, 
+                         [Visited Schools].[Attached Employee], Employee.[Emply Name], Stream.Stream, Student.Topper
+FROM            ((([Visited Schools] INNER JOIN
+                         Student ON [Visited Schools].SchoolId = Student.SchoolId) INNER JOIN
+                         Employee ON [Visited Schools].[Attached Employee] = Employee.EmplyId) INNER JOIN
+                         Stream ON Student.Stream = Stream.StreamId)
+GROUP BY [Visited Schools].SchoolId, [Visited Schools].[School Name], [Visited Schools].City, [Visited Schools].[Test Conducted], [Visited Schools].[Attached Employee], 
+                         Employee.[Emply Name], Stream.Stream, Student.Topper
+HAVING        (Student.Topper = true)</CommandText>
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+      </Query>
+      <rd:DataSetInfo>
+        <rd:DataSetName>Ingenium_2011DataSet</rd:DataSetName>
+        <rd:TableName>Tested School Toppers</rd:TableName>
+        <rd:TableAdapterName>Tested_School_ToppersTableAdapter</rd:TableAdapterName>
+        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
+        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
+      </rd:DataSetInfo>
+    </DataSet>
+  </DataSets>
+  <Width>5in</Width>
+  <Body>
+    <ReportItems>
+      <Textbox Name="textbox1">
+        <rd:DefaultName>textbox1</rd:DefaultName>
+        <Width>2.375in</Width>
+        <Style>
+          <FontWeight>700</FontWeight>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>1</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Height>0.21in</Height>
+        <Value>Toppers by Employee</Value>
+      </Textbox>
+      <List Name="List1">
+        <Sorting>
+          <SortBy>
+            <SortExpression>=Fields!Emply_Name.Value</SortExpression>
+            <Direction>Ascending</Direction>
+          </SortBy>
+        </Sorting>
+        <DataSetName>Ingenium_2011DataSet_Tested_School_Toppers</DataSetName>
+        <ReportItems>
+          <Textbox Name="Emply_Name">
+            <rd:DefaultName>Emply_Name</rd:DefaultName>
+            <Width>3.75in</Width>
+            <Style>
+              <FontWeight>700</FontWeight>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>1</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Height>0.21in</Height>
+            <Value>=Fields!Emply_Name.Value</Value>
+          </Textbox>
+          <Matrix Name="matrix1">
+            <MatrixColumns>
+              <MatrixColumn>
+                <Width>0.5in</Width>
+              </MatrixColumn>
+            </MatrixColumns>
+            <DataSetName>Ingenium_2011DataSet_Tested_School_Toppers</DataSetName>
+            <RowGroupings>
+              <RowGrouping>
+                <Width>2.5in</Width>
+                <DynamicRows>
+                  <Grouping Name="matrix1_School_Name">
+                    <GroupExpressions>
+                      <GroupExpression>=Fields!School_Name.Value</GroupExpression>
+                    </GroupExpressions>
+                  </Grouping>
+                  <Sorting>
+                    <SortBy>
+                      <SortExpression>=Fields!School_Name.Value</SortExpression>
+                      <Direction>Ascending</Direction>
+                    </SortBy>
+                  </Sorting>
+                  <Subtotal>
+                    <ReportItems>
+                      <Textbox Name="textbox5">
+                        <rd:DefaultName>textbox5</rd:DefaultName>
+                        <Style>
+                          <BorderColor>
+                            <Default>Silver</Default>
+                          </BorderColor>
+                          <BorderStyle>
+                            <Default>Solid</Default>
+                          </BorderStyle>
+                          <BorderWidth>
+                            <Default>0.25pt</Default>
+                          </BorderWidth>
+                          <PaddingLeft>2pt</PaddingLeft>
+                          <PaddingRight>2pt</PaddingRight>
+                          <PaddingTop>2pt</PaddingTop>
+                          <PaddingBottom>2pt</PaddingBottom>
+                        </Style>
+                        <CanGrow>true</CanGrow>
+                        <Value>Total</Value>
+                      </Textbox>
+                    </ReportItems>
+                  </Subtotal>
+                  <ReportItems>
+                    <Textbox Name="School_Name">
+                      <rd:DefaultName>School_Name</rd:DefaultName>
+                      <Style>
+                        <BorderColor>
+                          <Default>Silver</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <BorderWidth>
+                          <Default>0.25pt</Default>
+                        </BorderWidth>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>2</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!School_Name.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </DynamicRows>
+              </RowGrouping>
+            </RowGroupings>
+            <Top>0.5in</Top>
+            <ColumnGroupings>
+              <ColumnGrouping>
+                <Height>0.21in</Height>
+                <DynamicColumns>
+                  <Grouping Name="matrix1_Stream">
+                    <GroupExpressions>
+                      <GroupExpression>=Fields!Stream.Value</GroupExpression>
+                    </GroupExpressions>
+                  </Grouping>
+                  <Sorting>
+                    <SortBy>
+                      <SortExpression>=Fields!Stream.Value</SortExpression>
+                      <Direction>Ascending</Direction>
+                    </SortBy>
+                  </Sorting>
+                  <Subtotal>
+                    <ReportItems>
+                      <Textbox Name="textbox4">
+                        <rd:DefaultName>textbox4</rd:DefaultName>
+                        <Style>
+                          <BorderColor>
+                            <Default>Silver</Default>
+                          </BorderColor>
+                          <BorderStyle>
+                            <Default>Solid</Default>
+                          </BorderStyle>
+                          <BorderWidth>
+                            <Default>0.25pt</Default>
+                          </BorderWidth>
+                          <PaddingLeft>2pt</PaddingLeft>
+                          <PaddingRight>2pt</PaddingRight>
+                          <PaddingTop>2pt</PaddingTop>
+                          <PaddingBottom>2pt</PaddingBottom>
+                        </Style>
+                        <ZIndex>3</ZIndex>
+                        <CanGrow>true</CanGrow>
+                        <Value>Total</Value>
+                      </Textbox>
+                    </ReportItems>
+                  </Subtotal>
+                  <ReportItems>
+                    <Textbox Name="Stream">
+                      <rd:DefaultName>Stream</rd:DefaultName>
+                      <Style>
+                        <BorderColor>
+                          <Default>Silver</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <BorderWidth>
+                          <Default>0.25pt</Default>
+                        </BorderWidth>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>4</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!Stream.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </DynamicColumns>
+              </ColumnGrouping>
+            </ColumnGroupings>
+            <Width>3.5in</Width>
+            <Corner>
+              <ReportItems>
+                <Textbox Name="textbox3">
+                  <rd:DefaultName>textbox3</rd:DefaultName>
+                  <Style>
+                    <BorderColor>
+                      <Default>Silver</Default>
+                    </BorderColor>
+                    <BorderStyle>
+                      <Default>Solid</Default>
+                    </BorderStyle>
+                    <BorderWidth>
+                      <Default>0.25pt</Default>
+                    </BorderWidth>
+                    <PaddingLeft>2pt</PaddingLeft>
+                    <PaddingRight>2pt</PaddingRight>
+                    <PaddingTop>2pt</PaddingTop>
+                    <PaddingBottom>2pt</PaddingBottom>
+                  </Style>
+                  <ZIndex>5</ZIndex>
+                  <CanGrow>true</CanGrow>
+                  <Value>
+                  </Value>
+                </Textbox>
+              </ReportItems>
+            </Corner>
+            <MatrixRows>
+              <MatrixRow>
+                <Height>0.21in</Height>
+                <MatrixCells>
+                  <MatrixCell>
+                    <ReportItems>
+                      <Textbox Name="textbox2">
+                        <rd:DefaultName>textbox2</rd:DefaultName>
+                        <Style>
+                          <BorderColor>
+                            <Default>Silver</Default>
+                          </BorderColor>
+                          <BorderStyle>
+                            <Default>Solid</Default>
+                          </BorderStyle>
+                          <BorderWidth>
+                            <Default>0.25pt</Default>
+                          </BorderWidth>
+                          <PaddingLeft>2pt</PaddingLeft>
+                          <PaddingRight>2pt</PaddingRight>
+                          <PaddingTop>2pt</PaddingTop>
+                          <PaddingBottom>2pt</PaddingBottom>
+                        </Style>
+                        <ZIndex>1</ZIndex>
+                        <CanGrow>true</CanGrow>
+                        <Value>=Count(Fields!TotStudent.Value)</Value>
+                      </Textbox>
+                    </ReportItems>
+                  </MatrixCell>
+                </MatrixCells>
+              </MatrixRow>
+            </MatrixRows>
+            <Height>0.63in</Height>
+          </Matrix>
+        </ReportItems>
+        <Top>0.21in</Top>
+        <Width>4.875in</Width>
+        <Grouping Name="list1_Emply_Name">
+          <GroupExpressions>
+            <GroupExpression>=Fields!Emply_Name.Value</GroupExpression>
+          </GroupExpressions>
+          <PageBreakAtEnd>true</PageBreakAtEnd>
+        </Grouping>
+      </List>
+    </ReportItems>
+    <Height>2.25in</Height>
+  </Body>
+  <Language>en-US</Language>
+  <TopMargin>1in</TopMargin>
+</Report>

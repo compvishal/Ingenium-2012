@@ -1,0 +1,675 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{250EB9F6-D139-48CE-929E-97B404BE39D4}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>WindowsApplication1.My.MyApplication</StartupObject>
+    <RootNamespace>WindowsApplication1</RootNamespace>
+    <AssemblyName>Ingenium2021</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionStrict>Off</OptionStrict>
+    <OptionInfer>On</OptionInfer>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <ManifestCertificateThumbprint>7A10784036CCDE809DA77C9F22B8565D7E0A3C3D</ManifestCertificateThumbprint>
+    <ManifestKeyFile>Ingenium2011_TemporaryKey.pfx</ManifestKeyFile>
+    <GenerateManifests>true</GenerateManifests>
+    <SignManifests>false</SignManifests>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <PublishUrl>\\pawan-ho\F\vishal data\Ingenium 2012\Publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Unc</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
+    <WebPage>publish.htm</WebPage>
+    <ApplicationRevision>4</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Ingenium2021.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <PlatformTarget>x86</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Ingenium2021.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <PlatformTarget>x86</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>blackboard.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin\Admin Functions.Designer.vb">
+      <DependentUpon>Admin Functions.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Admin Functions.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\Birthday record.Designer.vb">
+      <DependentUpon>Birthday record.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Birthday record.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\Complete Data.Designer.vb">
+      <DependentUpon>Complete Data.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Complete Data.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\Student Data Complete.Designer.vb">
+      <DependentUpon>Student Data Complete.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Student Data Complete.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\Users.Designer.vb">
+      <DependentUpon>Users.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Users.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AzureSQLDataset.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AzureSQLDataset.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Common\AddFile.vb" />
+    <Compile Include="Common\Change Password.designer.vb">
+      <DependentUpon>Change Password.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Change Password.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Common\Common_Functions.vb" />
+    <Compile Include="Common\SMS.Designer.vb">
+      <DependentUpon>SMS.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Common\SMS.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Company\Company-old.Designer.vb">
+      <DependentUpon>Company-old.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Company\Company-old.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Company\Company.Designer.vb">
+      <DependentUpon>Company.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Company\Company.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataOperator\City.Designer.vb">
+      <DependentUpon>City.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DataOperator\City.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataOperator\Contacts.Designer.vb">
+      <DependentUpon>Contacts.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DataOperator\Contacts.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataOperator\Daily Entry Report.Designer.vb">
+      <DependentUpon>Daily Entry Report.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DataOperator\Daily Entry Report.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataOperator\Marks.Designer.vb">
+      <DependentUpon>Marks.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DataOperator\Marks.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataOperator\Sector-Segment.Designer.vb">
+      <DependentUpon>Sector-Segment.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DataOperator\Sector-Segment.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee Azure.Designer.vb">
+      <DependentUpon>Employee Azure.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Employee Azure.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee\Day Sheet.Designer.vb">
+      <DependentUpon>Day Sheet.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\Day Sheet.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee\Employee.Designer.vb">
+      <DependentUpon>Employee.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\Employee.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Event\Event Covered.Designer.vb">
+      <DependentUpon>Event Covered.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Event\Event Covered.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Event\Event Master.Designer.vb">
+      <DependentUpon>Event Master.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Event\Event Master.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Event\Event Report.Designer.vb">
+      <DependentUpon>Event Report.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Event\Event Report.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Event\Event Telecalling2.Designer.vb">
+      <DependentUpon>Event Telecalling2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Event\Event Telecalling2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Event\Events Students Telecalling.Designer.vb">
+      <DependentUpon>Events Students Telecalling.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Event\Events Students Telecalling.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Event\Event_Student_Report.Designer.vb">
+      <DependentUpon>Event_Student_Report.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Event\Event_Student_Report.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ingenium_2012DataSet.vb">
+      <DependentUpon>Ingenium_2012DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="LoginForm1.designer.vb">
+      <DependentUpon>LoginForm1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LoginForm1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Rough.Designer.vb">
+      <DependentUpon>Rough.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Rough.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="School Azure.Designer.vb">
+      <DependentUpon>School Azure.vb</DependentUpon>
+    </Compile>
+    <Compile Include="School Azure.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="School\Birthday.Designer.vb">
+      <DependentUpon>Birthday.vb</DependentUpon>
+    </Compile>
+    <Compile Include="School\Birthday.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="School\School Test.Designer.vb">
+      <DependentUpon>School Test.vb</DependentUpon>
+    </Compile>
+    <Compile Include="School\School Test.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="School\School Visit.Designer.vb">
+      <DependentUpon>School Visit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="School\School Visit.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="School\School.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="School\School.Designer.vb">
+      <DependentUpon>School.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ingenium2012.Designer.vb">
+      <DependentUpon>Ingenium2012.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ingenium2012.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ingenium_2012DataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Ingenium_2012DataSet.xsd</DependentUpon>
+      <Generator>MSDataSetGenerator</Generator>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="School\Test Marks Report.Designer.vb">
+      <DependentUpon>Test Marks Report.vb</DependentUpon>
+    </Compile>
+    <Compile Include="School\Test Marks Report.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="School\Test Report.Designer.vb">
+      <DependentUpon>Test Report.vb</DependentUpon>
+    </Compile>
+    <Compile Include="School\Test Report.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Student\Topper Students.Designer.vb">
+      <DependentUpon>Topper Students.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Student\Topper Students.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings.vb" />
+    <Compile Include="Student\Interested Students.Designer.vb">
+      <DependentUpon>Interested Students.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Student\Interested Students.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Student\Student Data Report.Designer.vb">
+      <DependentUpon>Student Data Report.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Student\Student Data Report.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Student\Students.Designer.vb">
+      <DependentUpon>Students.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Student\Students.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Student\Students2.Designer.vb">
+      <DependentUpon>Students2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Student\Students2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Admin\Admin Functions.resx">
+      <DependentUpon>Admin Functions.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\Birthday record.resx">
+      <DependentUpon>Birthday record.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\Complete Data.resx">
+      <DependentUpon>Complete Data.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\Student Data Complete.rdlc" />
+    <EmbeddedResource Include="Admin\DOB Student.rdlc" />
+    <EmbeddedResource Include="Admin\Student Data Complete.resx">
+      <DependentUpon>Student Data Complete.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\Users.resx">
+      <DependentUpon>Users.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\Change Password.resx">
+      <DependentUpon>Change Password.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\SMS.resx">
+      <DependentUpon>SMS.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataOperator\City.resx">
+      <DependentUpon>City.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataOperator\Contacts.resx">
+      <DependentUpon>Contacts.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataOperator\Daily Entry Report.resx">
+      <DependentUpon>Daily Entry Report.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataOperator\marks Entry Summary.rdlc" />
+    <EmbeddedResource Include="DataOperator\marks Entry Daily.rdlc" />
+    <EmbeddedResource Include="DataOperator\Sector-Segment.resx">
+      <DependentUpon>Sector-Segment.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee Azure.resx">
+      <DependentUpon>Employee Azure.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Event\Event Certificates.rdlc" />
+    <EmbeddedResource Include="Event\Copy of Event Certificates.rdlc" />
+    <EmbeddedResource Include="Event\Event covered Sheet -Printout.rdlc" />
+    <EmbeddedResource Include="Event\Event Report StuNumbers-new.rdlc" />
+    <EmbeddedResource Include="Event\Event Student COmplete.rdlc" />
+    <EmbeddedResource Include="Event\Event Report StuNumbers-SMS-2.rdlc" />
+    <EmbeddedResource Include="Event\Event_Student_Report.resx">
+      <DependentUpon>Event_Student_Report.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Event\Not Covered by City.rdlc" />
+    <EmbeddedResource Include="Event\Event School details.rdlc" />
+    <EmbeddedResource Include="Event\Event covered Sheet.rdlc" />
+    <EmbeddedResource Include="Event\summary report\Event S-present.rdlc" />
+    <EmbeddedResource Include="Event\summary report\Event S-call.rdlc" />
+    <EmbeddedResource Include="Event\summary report\Event S.rdlc" />
+    <EmbeddedResource Include="Event\Event School-Just Summary.rdlc" />
+    <EmbeddedResource Include="Event\Event Employee-Summary.rdlc" />
+    <EmbeddedResource Include="Event\Event Covered.resx">
+      <DependentUpon>Event Covered.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Event\Event School-Summary.rdlc" />
+    <EmbeddedResource Include="Event\Event Telecalling2.resx">
+      <DependentUpon>Event Telecalling2.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Event\Event Report StuNumbers-SMS.rdlc" />
+    <EmbeddedResource Include="Event\Event Criterion Summary-by School.rdlc" />
+    <EmbeddedResource Include="Event\Event Certificate2.rdlc" />
+    <EmbeddedResource Include="Event\summary report\Not Covered by Employee.rdlc" />
+    <EmbeddedResource Include="Interested Report.rdlc" />
+    <EmbeddedResource Include="Report-complete Event for SMS.rdlc" />
+    <EmbeddedResource Include="School Azure.resx">
+      <DependentUpon>School Azure.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="School\School Student Complete.rdlc" />
+    <EmbeddedResource Include="School\School-Test-Report.rdlc" />
+    <EmbeddedResource Include="School\Test Marks Report.resx">
+      <DependentUpon>Test Marks Report.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="School\Test Report.resx">
+      <DependentUpon>Test Report.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="School\Test Summary Reports\Test Summary - City.rdlc" />
+    <EmbeddedResource Include="School\Test Summary Reports\Test Summary.rdlc" />
+    <EmbeddedResource Include="School\Test Summary Reports\Test City.rdlc" />
+    <EmbeddedResource Include="School\Test Summary Reports\Test Employee.rdlc" />
+    <EmbeddedResource Include="Student\Topper Reports\Toppers by City.rdlc" />
+    <EmbeddedResource Include="Student\Topper Students.resx">
+      <DependentUpon>Topper Students.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Student\Interested Details.rdlc" />
+    <EmbeddedResource Include="Student\Interested Students.resx">
+      <DependentUpon>Interested Students.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Student\School Summary.rdlc" />
+    <EmbeddedResource Include="Student\Data Collected School.rdlc" />
+    <EmbeddedResource Include="DataOperator\Marks.resx">
+      <DependentUpon>Marks.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Event\Event Certificates-BBA.rdlc" />
+    <EmbeddedResource Include="Event\Event Present-Summary.rdlc" />
+    <EmbeddedResource Include="Event\Event Call Summary-by School.rdlc" />
+    <EmbeddedResource Include="Event\Event Certificates3.rdlc" />
+    <EmbeddedResource Include="Event\Event School-Summary1.rdlc" />
+    <EmbeddedResource Include="Event\Event Report StuNumbers.rdlc" />
+    <EmbeddedResource Include="Event\Event Report.resx">
+      <DependentUpon>Event Report.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Event\Event School.rdlc" />
+    <EmbeddedResource Include="Event\Event Master.resx">
+      <DependentUpon>Event Master.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Event\Events Students Telecalling.resx">
+      <DependentUpon>Events Students Telecalling.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="School\Birthday.resx">
+      <DependentUpon>Birthday.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="School\Employee Tested.rdlc" />
+    <EmbeddedResource Include="Employee\Company Visit-Employee.rdlc" />
+    <EmbeddedResource Include="Company\Company-old.resx">
+      <DependentUpon>Company-old.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Company\Company.resx">
+      <DependentUpon>Company.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee\Day Sheet.resx">
+      <DependentUpon>Day Sheet.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee\Employee.resx">
+      <DependentUpon>Employee.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ingenium2012.resx">
+      <DependentUpon>Ingenium2012.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm1.resx">
+      <DependentUpon>LoginForm1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="School\Not Tested.rdlc" />
+    <EmbeddedResource Include="Rough.resx">
+      <DependentUpon>Rough.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="School\School Test.resx">
+      <DependentUpon>School Test.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="School\School Visit-by Employee.rdlc" />
+    <EmbeddedResource Include="School\School Visit-by Purpose.rdlc" />
+    <EmbeddedResource Include="School\School Visit-by Date.rdlc" />
+    <EmbeddedResource Include="School\School Visit-by School.rdlc" />
+    <EmbeddedResource Include="School\School Visit.resx">
+      <DependentUpon>School Visit.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Student\Student-Calling.rdlc" />
+    <EmbeddedResource Include="Student\Student Data Report.resx">
+      <DependentUpon>Student Data Report.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Student\Student Test.rdlc" />
+    <EmbeddedResource Include="Student\Student-complete Details.rdlc" />
+    <EmbeddedResource Include="Student\School-Student-Summary.rdlc" />
+    <EmbeddedResource Include="School\School.resx">
+      <DependentUpon>School.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Student\SchoolDetails.rdlc" />
+    <EmbeddedResource Include="Student\Students.resx">
+      <DependentUpon>Students.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="School\Tested Scool.rdlc" />
+    <EmbeddedResource Include="Student\Students2.resx">
+      <DependentUpon>Students2.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="School\Test Summary Reports\Total Test.rdlc" />
+    <EmbeddedResource Include="Student\Topper Reports\Toppers by Employee.rdlc" />
+    <EmbeddedResource Include="Student\Topper Reports\Toppers School St list.rdlc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="AzureSQLDataset.xsc">
+      <DependentUpon>AzureSQLDataset.xsd</DependentUpon>
+    </None>
+    <None Include="AzureSQLDataset.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AzureSQLDataset.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="AzureSQLDataset.xss">
+      <DependentUpon>AzureSQLDataset.xsd</DependentUpon>
+    </None>
+    <None Include="Ingenium_2012DataSet.xsc">
+      <DependentUpon>Ingenium_2012DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Ingenium_2012DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Ingenium_2012DataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Ingenium_2012DataSet.xss">
+      <DependentUpon>Ingenium_2012DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\School.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Coaching.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Company.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Ingenium2011_TemporaryKey.pfx" />
+    <None Include="Resources\Data.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Refresh.png" />
+    <Content Include="blackboard.ico" />
+    <None Include="Resources\Delete.png" />
+    <None Include="Resources\Delete1.png" />
+    <Content Include="TextFile1.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
